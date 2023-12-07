@@ -11,6 +11,6 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.3"
+    "next": "13.5.1"
   }
 }

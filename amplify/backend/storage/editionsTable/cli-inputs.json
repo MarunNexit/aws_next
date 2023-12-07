@@ -1,0 +1,12 @@
+{
+  "resourceName": "editionsTable",
+  "tableName": "editionsTable",
+  "partitionKey": {
+    "fieldName": "edition_id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "editionsTableTrigger29976b2e"
+  ]
+}
