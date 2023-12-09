@@ -1,5 +1,72 @@
 {
+  "api": {
+    "userInfoApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "UserInfoLambda"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "advertisementLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "awscrm84a91211": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
   "function": {
+    "UserInfoLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "advertisementLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "editionsTableTrigger29976b2e": {
       "build": true,
       "dependsOn": [
@@ -15,6 +82,88 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_awscrm_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awscrm"
+        }
+      ]
+    },
+    "AMPLIFY_auth_awscrm_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awscrm"
+        }
+      ]
+    },
+    "AMPLIFY_auth_awscrm_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awscrm"
+        }
+      ]
+    },
+    "AMPLIFY_auth_awscrm_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awscrm"
+        }
+      ]
+    },
+    "AMPLIFY_function_UserInfoLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UserInfoLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_UserInfoLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UserInfoLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_advertisementLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "advertisementLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_advertisementLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "advertisementLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_editionsTableTrigger29976b2e_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "editionsTableTrigger29976b2e"
+        }
+      ]
+    },
+    "AMPLIFY_function_editionsTableTrigger29976b2e_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "editionsTableTrigger29976b2e"
+        }
+      ]
     }
   },
   "storage": {

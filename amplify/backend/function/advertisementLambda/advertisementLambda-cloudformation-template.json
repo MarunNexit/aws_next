@@ -1,23 +1,16 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.8.2\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.8.2\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
-    "env": {
-      "Type": "String"
-    },
-    "storageeditionsTableName": {
+    "CloudWatchRule": {
       "Type": "String",
-      "Default": "storageeditionsTableName"
-    },
-    "storageeditionsTableArn": {
-      "Type": "String",
-      "Default": "storageeditionsTableArn"
-    },
-    "storageeditionsTableStreamArn": {
-      "Type": "String",
-      "Default": "storageeditionsTableArn"
+      "Default": "NONE",
+      "Description": " Schedule Expression"
     },
     "deploymentBucketName": {
+      "Type": "String"
+    },
+    "env": {
       "Type": "String"
     },
     "s3Key": {
@@ -42,16 +35,24 @@
         "aws:asset:property": "Code"
       },
       "Properties": {
-        "Handler": "index.handler",
+        "Code": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": {
+            "Ref": "s3Key"
+          }
+        },
+        "Handler": "advertisementLambda::advertisementLambda.advertisementLambda::LambdaHandler",
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "editionsTableTrigger29976b2e",
+            "advertisementLambda",
             {
               "Fn::Join": [
                 "",
                 [
-                  "editionsTableTrigger29976b2e",
+                  "advertisementLambda",
                   "-",
                   {
                     "Ref": "env"
@@ -65,6 +66,9 @@
           "Variables": {
             "ENV": {
               "Ref": "env"
+            },
+            "REGION": {
+              "Ref": "AWS::Region"
             }
           }
         },
@@ -74,16 +78,9 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs18.x",
-        "Timeout": 25,
-        "Code": {
-          "S3Bucket": {
-            "Ref": "deploymentBucketName"
-          },
-          "S3Key": {
-            "Ref": "s3Key"
-          }
-        }
+        "Runtime": "dotnet6",
+        "Layers": [],
+        "Timeout": 25
       }
     },
     "LambdaExecutionRole": {
@@ -92,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "editionsTableLambdaRole29976b2e",
+            "awscrmLambdaRole6bc4c8eb",
             {
               "Fn::Join": [
                 "",
                 [
-                  "editionsTableLambdaRole29976b2e",
+                  "awscrmLambdaRole6bc4c8eb",
                   "-",
                   {
                     "Ref": "env"
@@ -166,59 +163,6 @@
             }
           ]
         }
-      }
-    },
-    "editionsTableTriggerPolicy": {
-      "DependsOn": [
-        "LambdaExecutionRole"
-      ],
-      "Type": "AWS::IAM::Policy",
-      "Properties": {
-        "PolicyName": "lambda-trigger-policy-editionsTable",
-        "Roles": [
-          {
-            "Ref": "LambdaExecutionRole"
-          }
-        ],
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": [
-                "dynamodb:DescribeStream",
-                "dynamodb:GetRecords",
-                "dynamodb:GetShardIterator",
-                "dynamodb:ListStreams"
-              ],
-              "Resource": [
-                {
-                  "Ref": "storageeditionsTableStreamArn"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    },
-    "editionsTableTrigger": {
-      "Type": "AWS::Lambda::EventSourceMapping",
-      "DependsOn": [
-        "editionsTableTriggerPolicy"
-      ],
-      "Properties": {
-        "BatchSize": 100,
-        "Enabled": true,
-        "EventSourceArn": {
-          "Ref": "storageeditionsTableStreamArn"
-        },
-        "FunctionName": {
-          "Fn::GetAtt": [
-            "LambdaFunction",
-            "Arn"
-          ]
-        },
-        "StartingPosition": "LATEST"
       }
     }
   },

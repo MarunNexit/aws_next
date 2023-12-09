@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/userinfo": {
+      "name": "/userinfo",
+      "lambdaFunction": "UserInfoLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/advertisement": {
+      "name": "/advertisement",
+      "lambdaFunction": "advertisementLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

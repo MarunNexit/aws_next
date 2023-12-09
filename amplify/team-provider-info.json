@@ -10,6 +10,37 @@
       "StackName": "amplify-awscrm-dev-215206",
       "StackId": "arn:aws:cloudformation:eu-central-1:022443050459:stack/amplify-awscrm-dev-215206/19afaf90-953a-11ee-af42-0698a23535cf",
       "AmplifyAppId": "d8sggii5701j0"
+    },
+    "categories": {
+      "function": {
+        "editionsTableTrigger29976b2e": {
+          "deploymentBucketName": "amplify-awscrm-dev-215206-deployment",
+          "s3Key": "amplify-builds/editionsTableTrigger29976b2e-51465054394f69783453-build.zip"
+        },
+        "advertisementLambda": {
+          "deploymentBucketName": "amplify-awscrm-dev-215206-deployment",
+          "s3Key": "amplify-builds/advertisementLambda-3161306b774e35574756-build.zip"
+        },
+        "UserInfoLambda": {
+          "deploymentBucketName": "amplify-awscrm-dev-215206-deployment",
+          "s3Key": "amplify-builds/UserInfoLambda-792f5334353538557970-build.zip"
+        }
+      },
+      "storage": {
+        "editionsTable": {}
+      },
+      "auth": {
+        "awscrm": {
+          "userPoolId": "eu-central-1_RtAkk0Cw9",
+          "userPoolName": "crm_users",
+          "webClientId": "5bldr2513dg9mre255i804o4u4",
+          "nativeClientId": "5bldr2513dg9mre255i804o4u4"
+        },
+        "awscrm84a91211": {}
+      },
+      "api": {
+        "userInfoApi": {}
+      }
     }
   }
 }

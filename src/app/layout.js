@@ -1,5 +1,9 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from "@/app/components/Header";
+import { Amplify } from 'aws-amplify';
+import config from '../amplifyconfiguration.json';
+Amplify.configure(config);
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} suppressHydrationWarning={true}>
+      <Header />
+      {children}
+      </body>
     </html>
   )
 }
