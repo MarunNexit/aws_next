@@ -20,6 +20,7 @@ const Profile = () => {
     return (
         <div>
             <form>
+                profile
                 <button type="button" onClick={() => GetAllUsersInfo()}>
                     Користувачі
                 </button>
