@@ -66,7 +66,7 @@ const Login = () => {
                     Login
                 </button>
                 <button type="button" onClick={() => CurrentAuthenticatedUser()}>
-                    Login
+                    CurrentUser
                 </button>
             </form>
         </div>
