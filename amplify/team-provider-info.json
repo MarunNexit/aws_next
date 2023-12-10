@@ -19,11 +19,11 @@
         },
         "advertisementLambda": {
           "deploymentBucketName": "amplify-awscrm-dev-215206-deployment",
-          "s3Key": "amplify-builds/advertisementLambda-3161306b774e35574756-build.zip"
+          "s3Key": "amplify-builds/advertisementLambda-4e71624730344c594c69-build.zip"
         },
         "UserInfoLambda": {
           "deploymentBucketName": "amplify-awscrm-dev-215206-deployment",
-          "s3Key": "amplify-builds/UserInfoLambda-792f5334353538557970-build.zip"
+          "s3Key": "amplify-builds/UserInfoLambda-344a7a4261662f355345-build.zip"
         }
       },
       "storage": {

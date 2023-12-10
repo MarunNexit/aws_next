@@ -5,6 +5,7 @@ import { Amplify } from 'aws-amplify';
 import config from '../../../amplifyconfiguration.json';
 Amplify.configure(config);
 import { useRouter } from 'next/navigation';
+import {GetAllUsersInfo} from "@/app/functions/GetAllUsersInfo";
 
 
 const Profile = () => {
@@ -19,7 +20,7 @@ const Profile = () => {
     return (
         <div>
             <form>
-                <button type="button" onClick={() => getUserRole()}>
+                <button type="button" onClick={() => GetAllUsersInfo()}>
                     Користувачі
                 </button>
                 <button type="button" onClick={() => GetAddvertisement()}>

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -13,7 +13,7 @@ namespace advertisementLambda
 {
     public class advertisementLambda
     {
-    private const string connectionString = "Server=awsdata.csihpvbr1yo7.eu-central-1.rds.amazonaws.com;Database=awsdata;User Id=admin;Password=admin1234;";
+    private const string connectionString = "Server=awsdata.csihpvbr1yo7.eu-central-1.rds.amazonaws.com;Database=aws_crm_database;User Id=admin;Password=admin1234;";
 
         public async Task<APIGatewayProxyResponse> LambdaHandler(APIGatewayProxyRequest request, ILambdaContext context)
         {
@@ -28,7 +28,7 @@ namespace advertisementLambda
 
             try
             {
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new MySqlConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
@@ -39,7 +39,7 @@ namespace advertisementLambda
 
                             // Використовуйте параметризований SQL-запит для безпечного виклику
                             var sqlQuery = "SELECT * FROM Advertisement";
-                            var sqlCommand = new SqlCommand(sqlQuery, connection);
+                            var sqlCommand = new MySqlCommand(sqlQuery, connection);
 
                             using (var reader = await sqlCommand.ExecuteReaderAsync())
                             {

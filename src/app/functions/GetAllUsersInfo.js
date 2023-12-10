@@ -1,6 +1,6 @@
 import { get } from 'aws-amplify/api';
 
-export async function getUserRole() {
+export async function GetAllUsersInfo() {
     try {
         const restOperation = get({
             apiName: 'userInfoApi',

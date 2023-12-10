@@ -3,11 +3,15 @@ import { get } from 'aws-amplify/api';
 export async function GetAddvertisement() {
     try {
         const restOperation = get({
-            apiName: 'https://od0aozpthe.execute-api.eu-central-1.amazonaws.com/dev',
+            apiName: 'userInfoApi',
             path: '/advertisement'
         });
-        const response = await restOperation.response;
-        console.log('GET call succeeded: ', response);
+
+        const { body } = await restOperation.response;
+        const str = await body.text();
+        // Далі ви можете використовувати 'data' для операцій
+        console.log('GET call succeeded: ', str);
+
     } catch (error) {
         console.log('GET call failed: ', error);
     }
