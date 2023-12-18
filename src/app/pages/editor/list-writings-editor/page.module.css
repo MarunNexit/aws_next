@@ -1,0 +1,49 @@
+.frameChild {
+    position: relative;
+    border-right: 2px solid var(--color-whitesmoke-200);
+    box-sizing: border-box;
+    width: 2px;
+    height: 937px;
+}
+.listwritingseditorInner {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-91xl) 0 0;
+}
+.b {
+    flex: 1;
+    position: relative;
+}
+.wrapper {
+    align-self: stretch;
+    flex-direction: row;
+}
+.frameParent,
+.listwritingseditor,
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.frameParent {
+    flex: 1;
+    flex-direction: column;
+    padding: var(--padding-81xl) 0 0 var(--padding-31xl);
+    gap: var(--gap-31xl);
+}
+.listwritingseditor {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    overflow: hidden;
+    flex-direction: row;
+    padding: 0 var(--padding-131xl) var(--padding-181xl) var(--padding-31xl);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: var(--font-size-17xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+}

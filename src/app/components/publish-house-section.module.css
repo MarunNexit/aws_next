@@ -1,0 +1,138 @@
+.logo51Icon {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+}
+.publishHouse {
+  position: relative;
+  font-weight: 800;
+}
+.logo,
+.logoWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 283px;
+  gap: var(--gap-mini);
+}
+.logoWrapper {
+  font-size: var(--h4-heading-size);
+  color: var(--color-darkslategray-300);
+}
+.div {
+  position: relative;
+  line-height: 150%;
+}
+.menu {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-33xl);
+}
+.dribbbleChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-mediumslateblue);
+  width: 40px;
+  height: 40px;
+}
+.fb {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  line-height: 150%;
+}
+.dribbble {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.ig,
+.yt {
+  position: absolute;
+  top: 8px;
+  left: 11px;
+  line-height: 150%;
+}
+.yt {
+  left: 9px;
+}
+.dribbbleParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+  color: var(--color-white);
+}
+.dividerIcon,
+.publishHouseInc {
+  align-self: stretch;
+  position: relative;
+}
+.dividerIcon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.publishHouseInc {
+  line-height: 150%;
+  text-align: center;
+}
+.frameParent {
+  align-self: stretch;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-31xl) var(--padding-81xl);
+  gap: var(--gap-11xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-100);
+  font-family: var(--h4-heading);
+}
+@media screen and (max-width: 1200px) {
+  .publishHouse {
+    font-size: var(--h4-heading-size);
+  }
+}
+@media screen and (max-width: 960px) {
+  .publishHouse {
+    font-size: var(--font-size-4xl);
+  }
+  .div,
+  .publishHouseInc {
+    font-size: var(--font-size-2xs);
+  }
+  .frameParent {
+    padding-left: var(--padding-31xl);
+    padding-right: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 830px) {
+  .frameParent {
+    padding-left: var(--padding-31xl);
+    padding-right: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .publishHouse {
+    font-size: var(--font-size-mid);
+  }
+}

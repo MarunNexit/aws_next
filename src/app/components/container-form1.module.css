@@ -1,0 +1,164 @@
+.b,
+.b1 {
+  position: relative;
+}
+.b {
+  align-self: stretch;
+}
+.b1 {
+  line-height: 150%;
+}
+.b1,
+.container,
+.div {
+  align-self: stretch;
+}
+.div {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  width: 200px;
+  flex-shrink: 0;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.mazkevych2003gmailcom {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+}
+.frameGroup {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-8xs);
+}
+.b6,
+.group {
+  font-family: var(--paragraph-bold-14);
+}
+.group {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-100);
+}
+.b6 {
+  position: relative;
+  font-size: var(--paragraph-bold-14-size);
+  line-height: 150%;
+  color: var(--color-white);
+  text-align: center;
+}
+.accept {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumslateblue);
+  padding: var(--padding-base) var(--padding-29xl);
+  background-color: var(--color-mediumslateblue);
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  width: 233px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.acceptWrapper,
+.parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.acceptWrapper {
+  align-self: stretch;
+  flex-direction: row;
+  padding: var(--padding-xl) 0 0;
+}
+.parent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-xl);
+}
+.containerIcon {
+  align-self: stretch;
+  position: relative;
+  border-radius: var(--br-base);
+  max-height: 100%;
+  width: 345px;
+  object-fit: cover;
+}
+.frameParent,
+.frameWrapper {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.frameParent {
+  flex-direction: row;
+  align-items: center;
+  padding: 0 var(--padding-31xl) 0 0;
+  gap: var(--gap-46xl);
+}
+.frameWrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1200px) {
+  .b1,
+  .div,
+  .mazkevych2003gmailcom {
+    font-size: var(--font-size-base);
+  }
+  .containerIcon {
+    width: 456px;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 961px) {
+  .b1,
+  .div,
+  .mazkevych2003gmailcom {
+    font-size: var(--font-size-base);
+  }
+  .containerIcon {
+    display: none;
+    width: 456px;
+    height: 456px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .b1,
+  .div,
+  .mazkevych2003gmailcom {
+    font-size: var(--font-size-xs);
+  }
+  .containerIcon {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .b1,
+  .div,
+  .mazkevych2003gmailcom {
+    font-size: var(--font-size-xs);
+  }
+  .containerIcon {
+    display: none;
+  }
+}

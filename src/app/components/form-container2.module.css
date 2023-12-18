@@ -1,0 +1,63 @@
+.b {
+  flex: 1;
+  position: relative;
+}
+.wrapper {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-base);
+}
+.plusIcon {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+.add {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.div {
+  position: relative;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.addParent,
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.addParent {
+  border-radius: var(--br-5xs);
+  border: 2px dashed var(--color-mediumslateblue);
+  box-sizing: border-box;
+  height: 188.8px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-base) var(--padding-5xl);
+  gap: var(--gap-3xs);
+  text-align: left;
+  font-size: var(--font-size-xs);
+}
+.frameParent {
+  border-radius: var(--br-xs);
+  background-color: var(--color);
+  box-shadow: var(--cards-shadow);
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base);
+  gap: var(--gap-base);
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

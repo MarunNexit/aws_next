@@ -1,0 +1,99 @@
+.frameChild {
+  border-top: 2px solid var(--color-whitesmoke-200);
+  box-sizing: border-box;
+  width: 937px;
+  height: 2px;
+}
+.b,
+.frameChild {
+  position: relative;
+}
+.p {
+  margin: 0;
+}
+.div,
+.div1 {
+  position: relative;
+  line-height: 24px;
+  mix-blend-mode: normal;
+}
+.div {
+  align-self: stretch;
+  display: inline-block;
+  height: 47px;
+  flex-shrink: 0;
+}
+.div1 {
+  font-size: var(--font-size-11xl);
+  color: var(--color-dimgray-200);
+  text-align: left;
+}
+.div2,
+.textField {
+  align-self: stretch;
+}
+.textField {
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--color-whitesmoke-100);
+  box-sizing: border-box;
+  width: 256.7px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+}
+.div2 {
+  position: relative;
+  line-height: 24px;
+  mix-blend-mode: normal;
+}
+.frameParent,
+.frameWrapper,
+.parent,
+.textFieldParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.textFieldParent {
+  width: 930px;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: var(--padding-xl) var(--padding-21xl);
+  box-sizing: border-box;
+  gap: var(--gap-21xl);
+  text-align: center;
+  font-size: var(--font-size-mini);
+  color: var(--color-dimgray-100);
+}
+.frameParent,
+.frameWrapper,
+.parent {
+  flex-direction: column;
+}
+.parent {
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  gap: var(--gap-21xl);
+}
+.frameParent,
+.frameWrapper {
+  align-self: stretch;
+  color: var(--color-gray-200);
+}
+.frameParent {
+  flex: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

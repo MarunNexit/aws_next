@@ -7,37 +7,30 @@ import config from '../../../amplifyconfiguration.json';
 Amplify.configure(config);
 import { getCurrentUser } from 'aws-amplify/auth';
 import { useRouter } from 'next/navigation';
+import {useState} from "react";
 
 
 
 const SignOutUser = () => {
     const router = useRouter();
-
-
+    const [alertMessage, setAlertMessage] = useState('');
+    const [showAllert, setShowAllert] = useState(false);
+    const handleAlertClose = () => setShowAllert(false);
 
     const handleRedirect = () => {
         // Програмована зміна URL
+        localStorage.setItem('auth', "false");
         router.push('/');
     };
 
-    async function currentAuthenticatedUser() {
-        try {
-            const { username, userId, signInDetails } = await getCurrentUser();
-            console.log(`The username: ${username}`);
-            console.log(`The userId: ${userId}`);
-            console.log(`The signInDetails: ${signInDetails}`);
-            handleRedirect();
-        } catch (err) {
-            console.log(err);
-        }
-    }
 
     async function handleSignOut() {
         try {
-            await currentAuthenticatedUser();
             await signOut();
+            handleRedirect();
         } catch (error) {
-            console.log('error signing out: ', error);
+            setAlertMessage('error signing in' + error)
+            setShowAllert(true);
         }
     }
 

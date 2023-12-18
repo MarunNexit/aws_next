@@ -1,0 +1,102 @@
+.b {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-11xl);
+}
+.span {
+  color: var(--color-firebrick);
+}
+.b1,
+.inputText {
+  position: relative;
+}
+.b1 {
+  align-self: stretch;
+}
+.inputText {
+  flex: 1;
+  line-height: 24px;
+  mix-blend-mode: normal;
+}
+.input,
+.textField {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.textField {
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-whitesmoke-100);
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-xs) var(--padding-base);
+}
+.input {
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-size-mini);
+  color: var(--color-dimgray-100);
+}
+.div1 {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  opacity: 0.5;
+}
+.input2,
+.textField2 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.textField2 {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-whitesmoke-100);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-base);
+}
+.input2 {
+  height: 164px;
+  flex-direction: column;
+  font-size: var(--font-size-mini);
+}
+.b4 {
+  position: relative;
+  font-size: var(--paragraph-bold-14-size);
+  line-height: 150%;
+  font-family: var(--paragraph-bold-14);
+  color: var(--color-white);
+  text-align: center;
+}
+.contactUs {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumslateblue);
+  padding: var(--padding-base) var(--padding-29xl);
+  background-color: var(--color-mediumslateblue);
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  width: 233px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.destination {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

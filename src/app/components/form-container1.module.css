@@ -1,0 +1,36 @@
+.b,
+.b1 {
+  align-self: stretch;
+}
+.b {
+  position: relative;
+  line-height: 24px;
+  mix-blend-mode: normal;
+}
+.b1 {
+  text-align: center;
+}
+.b1,
+.div {
+  position: relative;
+  line-height: 24px;
+  mix-blend-mode: normal;
+}
+.bigField {
+  align-self: stretch;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--color-whitesmoke-100);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--color-dimgray-200);
+  font-family: var(--font-inter);
+}

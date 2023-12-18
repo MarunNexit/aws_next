@@ -8,9 +8,11 @@ export async function GetAddvertisement() {
         });
 
         const { body } = await restOperation.response;
-        const str = await body.text();
+        const data = JSON.parse(await body.text());
         // Далі ви можете використовувати 'data' для операцій
-        console.log('GET call succeeded: ', str);
+
+        console.log('GET call succeeded: ', data);
+        return data;
 
     } catch (error) {
         console.log('GET call failed: ', error);

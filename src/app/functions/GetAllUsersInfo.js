@@ -6,8 +6,11 @@ export async function GetAllUsersInfo() {
             apiName: 'userInfoApi',
             path: '/userinfo'
         });
-        const response = await restOperation.response;
-        console.log('GET call succeeded: ', response);
+
+        const { body } = await restOperation.response;
+        const dataUser = JSON.parse(await body.text());
+
+        return dataUser;
     } catch (error) {
         console.log('GET call failed: ', error);
     }

@@ -1,0 +1,53 @@
+.menuParent,
+.zarrinLandingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.menuParent {
+    align-self: stretch;
+    padding: 0 var(--padding-81xl);
+    background-image: url(/frame-33@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.zarrinLandingPage {
+    position: relative;
+    background-color: #fafafa;
+    width: 100%;
+    overflow: hidden;
+    gap: var(--gap-21xl);
+}
+@media screen and (max-width: 960px) {
+    .menuParent {
+        padding-left: var(--padding-31xl);
+        padding-right: var(--padding-31xl);
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 830px) {
+    .menuParent {
+        padding-left: var(--padding-31xl);
+        padding-right: var(--padding-31xl);
+        box-sizing: border-box;
+    }
+    .zarrinLandingPage {
+        gap: var(--gap-0);
+    }
+}
+@media screen and (max-width: 600px) {
+    .zarrinLandingPage {
+        gap: var(--gap-0);
+    }
+}
+@media screen and (max-width: 420px) {
+    .menuParent {
+        padding-left: var(--padding-31xl);
+        box-sizing: border-box;
+    }
+    .zarrinLandingPage {
+        gap: var(--gap-0);
+    }
+}

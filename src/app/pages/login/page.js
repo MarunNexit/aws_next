@@ -21,6 +21,7 @@ const Login = () => {
 
     const handleRedirect = () => {
         // Програмована зміна URL
+        localStorage.setItem('auth', "true");
         router.push('/');
     };
 
@@ -66,7 +67,7 @@ const Login = () => {
                     Login
                 </button>
                 <button type="button" onClick={() => CurrentAuthenticatedUser()}>
-                    Current User
+                    Login
                 </button>
             </form>
         </div>

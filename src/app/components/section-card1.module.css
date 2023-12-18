@@ -1,0 +1,226 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+.containerIcon,
+.containerIcon1 {
+  position: relative;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  overflow: hidden;
+  height: 250.5px;
+  object-fit: cover;
+}
+.containerIcon {
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.containerIcon1 {
+  flex: 1;
+}
+.containerGroup,
+.containerParent {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+.containerGroup {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.containerParent {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+.h1 {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -1px;
+  line-height: 45px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.li {
+  margin-bottom: 0;
+}
+.ul {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: var(--padding-2xl);
+}
+.div {
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+}
+.b,
+.container {
+  font-family: var(--paragraph-bold-14);
+}
+.container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-100);
+}
+.b {
+  position: relative;
+  font-size: var(--paragraph-bold-14-size);
+  line-height: 150%;
+  color: var(--color-white);
+  text-align: center;
+}
+.contactUs {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumslateblue);
+  padding: var(--padding-base) var(--padding-29xl);
+  background-color: var(--color-mediumslateblue);
+  border-radius: var(--br-5xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.contactUs:hover {
+  animation: 2s ease 0s 1 normal none pulsate;
+  opacity: 1;
+}
+.contactUsWrapper,
+.frameGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contactUsWrapper {
+  align-self: stretch;
+}
+.frameGroup {
+  flex: 1;
+  gap: var(--gap-11xl);
+}
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-31xl) var(--padding-81xl);
+  gap: var(--gap-31xl);
+  text-align: left;
+  font-size: var(--h4-heading-size);
+  color: var(--color-darkslategray-300);
+  font-family: var(--h4-heading);
+}
+@media screen and (max-width: 1200px) {
+  .div {
+    font-size: var(--font-size-base);
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 961px) {
+  .div {
+    font-size: var(--font-size-base);
+  }
+}
+@media screen and (max-width: 960px) {
+  .h1 {
+    font-size: var(--font-size-4xl);
+  }
+  .div {
+    font-size: var(--font-size-xs);
+  }
+  .frameParent {
+    gap: var(--gap-11xl);
+    align-items: center;
+    justify-content: center;
+    padding-left: var(--padding-31xl);
+    padding-right: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 830px) {
+  .frameParent {
+    padding-left: var(--padding-31xl);
+    padding-right: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 600px) {
+  .containerIcon,
+  .containerIcon1,
+  .containerParent {
+    display: none;
+  }
+  .contactUs {
+    padding: var(--padding-5xs) var(--padding-5xl);
+    box-sizing: border-box;
+  }
+  .frameParent {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  .containerIcon,
+  .containerIcon1 {
+    display: none;
+  }
+  .containerParent {
+    display: none;
+    flex: unset;
+    align-self: stretch;
+  }
+  .h1 {
+    font-size: var(--font-size-mid);
+  }
+  .div {
+    font-size: var(--font-size-xs);
+  }
+  .contactUs {
+    padding: var(--padding-5xs) var(--padding-5xl);
+    box-sizing: border-box;
+  }
+  .frameGroup {
+    flex: unset;
+    align-self: stretch;
+  }
+  .frameParent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

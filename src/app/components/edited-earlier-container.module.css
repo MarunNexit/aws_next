@@ -1,0 +1,30 @@
+.b {
+  flex: 1;
+  position: relative;
+}
+.wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameChild {
+  position: relative;
+  border-top: 2px solid var(--color-whitesmoke-200);
+  box-sizing: border-box;
+  width: 892px;
+  height: 2px;
+}
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

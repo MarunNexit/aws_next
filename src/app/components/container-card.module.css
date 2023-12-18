@@ -1,0 +1,206 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+.h1 {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  line-height: 64px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.div {
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+}
+.container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-base);
+}
+.b {
+  position: relative;
+  font-size: var(--paragraph-bold-14-size);
+  line-height: 150%;
+  font-family: var(--h4-heading);
+  color: var(--color-darkslategray-100);
+  text-align: center;
+}
+.largenormaljustifyactive {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-base) var(--padding-29xl);
+  background-color: var(--color-white);
+  flex: 1;
+  border-radius: var(--br-5xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.largenormaljustifyactive:hover {
+  animation: 2s ease 0s 1 normal none pulsate;
+  opacity: 1;
+}
+.frameGroup,
+.largenormaljustifyactiveParent {
+  align-self: stretch;
+  display: flex;
+  gap: var(--gap-11xl);
+}
+.largenormaljustifyactiveParent {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-131xl) 0 0;
+}
+.frameGroup {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.containerIcon {
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  overflow: hidden;
+  height: 456px;
+  object-fit: cover;
+}
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-81xl) 0 var(--padding-181xl);
+  gap: var(--gap-31xl);
+  text-align: left;
+  font-size: var(--font-size-45xl);
+  color: var(--color-white);
+  font-family: var(--h4-heading);
+}
+@media screen and (max-width: 1200px) {
+  .containerIcon {
+    width: 456px;
+    min-width: 456px;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 961px) {
+  .h1 {
+    font-size: var(--font-size-36xl);
+  }
+  .containerIcon {
+    display: none;
+    width: 456px;
+    height: 456px;
+    min-width: 456px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .h1 {
+    font-size: var(--font-size-27xl);
+  }
+  .div {
+    font-size: var(--font-size-xs);
+  }
+  .b {
+    font-size: var(--paragraph-bold-14-size);
+  }
+  .containerIcon,
+  .frameGroup {
+    flex: unset;
+    align-self: stretch;
+  }
+  .containerIcon {
+    display: none;
+  }
+  .frameParent {
+    flex-direction: column;
+    gap: var(--gap-11xl);
+    padding-top: var(--padding-31xl);
+    padding-bottom: var(--padding-81xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 830px) {
+  .containerIcon {
+    display: none;
+  }
+  .frameParent {
+    padding-top: var(--padding-31xl);
+    padding-bottom: var(--padding-81xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 600px) {
+  .h1 {
+    font-size: var(--font-size-17xl);
+  }
+  .largenormaljustifyactive {
+    padding: var(--padding-5xs) var(--padding-5xl);
+    box-sizing: border-box;
+  }
+  .frameParent {
+    padding-top: var(--padding-31xl);
+    padding-bottom: var(--padding-81xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .h1 {
+    font-size: var(--font-size-17xl);
+  }
+  .largenormaljustifyactive {
+    padding: var(--padding-5xs) var(--padding-5xl);
+    box-sizing: border-box;
+  }
+  .containerIcon,
+  .frameGroup {
+    flex: unset;
+    align-self: stretch;
+  }
+  .containerIcon {
+    display: none;
+  }
+  .frameParent {
+    flex-direction: column;
+    gap: var(--gap-11xl);
+    padding-top: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+}

@@ -1,8 +1,8 @@
-// components/Header.js
+// components/HeaderOLD.js
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Header = () => {
+const HeaderOLD = () => {
     return (
         <header>
             <nav>
@@ -19,4 +19,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default HeaderOLD;
