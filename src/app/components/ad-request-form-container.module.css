@@ -41,3 +41,27 @@
   color: var(--color-black);
   font-family: var(--font-inter);
 }
+
+.fileInputContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.customFileInput {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+}
+
+#fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}

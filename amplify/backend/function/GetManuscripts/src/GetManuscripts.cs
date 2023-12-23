@@ -93,6 +93,95 @@ namespace GetManuscripts
                             }
                             break;
 
+
+                        case "POST":
+                            context.Logger.LogLine($"Post Request: {request.Path}\n");
+
+                            if (request.Body == null)
+                            {
+                                // Handle the case where the request body is null
+                                response.StatusCode = (int)HttpStatusCode.BadRequest;
+                                response.Body = "Request body is null.";
+                                return response;
+                            }
+                            // Parse the request body to get the data for the new record
+                            var requestBody = request.Body;
+                            var newEdition = Newtonsoft.Json.JsonConvert.DeserializeObject<Edition>(requestBody);
+
+                            using (var transaction = await connection.BeginTransactionAsync())
+                            {
+                                try
+                                {
+                                    // Add the new record to the Edition table
+                                    var insertEditionQuery = @"
+                                        INSERT INTO Edition (author_id, edition_type, edition_title, edition_description, link_for_file, number_pages, format_pages, status, date_adding)
+                                        VALUES (@AuthorId, @EditionType, @EditionTitle, @EditionDescription, @LinkForFile, @NumberPages, @FormatPages, @Status, @DateAdding);
+                                        SELECT LAST_INSERT_ID();";
+
+                                    var insertEditionCommand = new MySqlCommand(insertEditionQuery, connection, transaction);
+                                    insertEditionCommand.Parameters.AddWithValue("@AuthorId", newEdition.AuthorId);
+                                    insertEditionCommand.Parameters.AddWithValue("@EditionType", newEdition.EditionType);
+                                    insertEditionCommand.Parameters.AddWithValue("@EditionTitle", newEdition.EditionTitle);
+                                    insertEditionCommand.Parameters.AddWithValue("@EditionDescription", newEdition.EditionDescription);
+                                    insertEditionCommand.Parameters.AddWithValue("@LinkForFile", newEdition.LinkForFile);
+                                    insertEditionCommand.Parameters.AddWithValue("@NumberPages", newEdition.NumberPages);
+                                    insertEditionCommand.Parameters.AddWithValue("@FormatPages", newEdition.FormatPages);
+                                    insertEditionCommand.Parameters.AddWithValue("@Status", newEdition.Status);
+                                    insertEditionCommand.Parameters.AddWithValue("@DateAdding", DateTime.Now);
+
+                                    var newEditionId = await insertEditionCommand.ExecuteScalarAsync();
+
+                                    if(newEdition.Status == "Published") {
+                                        var insertPrintingsQuery = @"
+                                            INSERT INTO Printings (title, printing_quantity, printing_location, printing_date, advertising_space_available, selling_price, cover, ISBN, ISSN, print_edition_id)
+                                            VALUES (@Title, @PrintingQuantity, @PrintingLocation, @PrintingDate, @AdvertisingSpaceAvailable, @SellingPrice, @Cover, @ISBN, @ISSN, @PrintEditionId);";
+
+                                        var insertPrintingsCommand = new MySqlCommand(insertPrintingsQuery, connection, transaction);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@Title", newEdition.PrintingTitle);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@PrintingQuantity", newEdition.PrintingQuantity);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@PrintingLocation", newEdition.PrintingLocation);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@PrintingDate", newEdition.PrintingDate);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@AdvertisingSpaceAvailable", newEdition.AdvertisingSpaceAvailable);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@SellingPrice", newEdition.SellingPrice);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@Cover", newEdition.Cover);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@ISBN", newEdition.ISBN);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@ISSN", newEdition.ISSN);
+                                        insertPrintingsCommand.Parameters.AddWithValue("@PrintEditionId", newEditionId);
+
+                                        await insertPrintingsCommand.ExecuteNonQueryAsync();
+                                    }
+
+
+                                    // Commit the transaction
+                                    transaction.Commit();
+
+                                    response.StatusCode = (int)HttpStatusCode.Created;
+                                    response.Body = $"{{ \"newEditionId\": {newEditionId} }}";
+                                    response.Headers["Content-Type"] = "application/json";
+                                }
+                                catch (Exception ex)
+                                {
+                                    try
+                                    {
+                                        // Rollback the transaction in case of an error
+                                        if (transaction.Connection != null)
+                                        {
+                                            transaction.Rollback();
+                                        }
+                                    }
+                                    catch (Exception rollbackEx)
+                                    {
+                                        context.Logger.LogLine($"Rollback error: {rollbackEx.Message}\n");
+                                    }
+
+                                    context.Logger.LogLine($"Error: {ex.Message}\n");
+                                    response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                                    response.Body = $"{{ \"error\": \"{ex.Message}\" }}";
+                                }
+                            }
+                            break;
+
+
                         default:
                             context.Logger.LogLine($"Unsupported HTTP method {request.HttpMethod}\n");
                             response.StatusCode = (int)HttpStatusCode.BadRequest;

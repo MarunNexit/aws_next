@@ -34,3 +34,10 @@
   color: var(--color-dimgray-200);
   font-family: var(--font-inter);
 }
+
+.Selector{
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: var(--color-dimgray-200);
+}

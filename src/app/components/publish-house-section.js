@@ -1,4 +1,5 @@
 import styles from "./publish-house-section.module.css";
+import Link from "next/link";
 
 const PublishHouseSection = () => {
   return (
@@ -10,10 +11,10 @@ const PublishHouseSection = () => {
         </div>
       </div>
       <div className={styles.menu}>
-        <div className={styles.div}>Головна</div>
-        <div className={styles.div}>Увійти</div>
-        <div className={styles.div}>{`Стати автором `}</div>
-        <div className={styles.div}>Стати рекламодавцем</div>
+        <Link className={styles.div} href={"/pages/home#home"}>Головна</Link>
+        <Link className={styles.div} href={"/pages/login-page"}>Увійти</Link>
+        <Link className={styles.div} href={"/pages/sign-in-author"}>{`Стати автором `}</Link>
+        <Link className={styles.div} href={"/pages/sign-in-advertiser"}>Стати рекламодавцем</Link>
       </div>
       <div className={styles.dribbbleParent}>
         <div className={styles.dribbble}>

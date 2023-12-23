@@ -36,7 +36,7 @@ const EditPageContainer = () => {
       </div>
       <FormContainer2 />
       <button className={styles.contactUs}>
-        <b className={styles.b4}>Відправити на редагування</b>
+        <b className={styles.b4}>Відправити рукопис</b>
       </button>
     </div>
   );

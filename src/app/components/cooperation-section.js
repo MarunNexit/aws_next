@@ -1,4 +1,5 @@
 import styles from "./cooperation-section.module.css";
+import Link from "next/link";
 
 const CooperationSection = () => {
   return (
@@ -13,9 +14,9 @@ const CooperationSection = () => {
             простір для реклами, але і стратегічно розроблені кампанії,
             спрямовані на досягнення ваших бізнес-цілей.
           </div>
-          <button className={styles.contactUs}>
+          <Link className={styles.contactUs} href={"/pages/sign-in-advertiser"}>
             <b className={styles.b}>Замовити рекламу</b>
-          </button>
+          </Link>
         </div>
         <div className={styles.containerWrapper}>
           <img

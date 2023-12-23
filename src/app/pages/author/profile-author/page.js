@@ -6,6 +6,7 @@ import Header from "@/app/components/header";
 import {useEffect, useState} from "react";
 import {getUserInfo} from "@/app/functions/GetUserInfo";
 import ContainerForm1 from "@/app/components/container-form1";
+import GetInfoWritings from "@/app/components/get-info-writings";
 
 const ProfileAuthor = () => {
 
@@ -38,12 +39,12 @@ const ProfileAuthor = () => {
             <div className={styles.profileauthorInner}>
                 <div className={styles.frameChild} />
             </div>
-            <div className={styles.profileauthorChild}>
+            <div className={styles.profileauthorChild} >
                 <div className={styles.frameParent}>
                     <ContainerForm1 name={userInfo.UserName} email = {userInfo.Email} phone = {userInfo.Phone} department= {userInfo.EditorDepartment} addition = {userInfo.ContactInform} role = {"author"}/>
                     <div className={styles.frameItem} />
                     <div className={styles.frameParent1}>
-                        <div className={styles.parent3}>
+                        <div className={styles.parent3} id={"statistic"}>
                             <b className={styles.b6}>Продажі рукописів</b>
                             <div className={styles.textFieldParent}>
                                 <div className={styles.textField}>
@@ -67,49 +68,11 @@ const ProfileAuthor = () => {
                                     <div className={styles.div6}>$300</div>
                                 </div>
                             </div>
-                            <FormContainer1 />
+                            <FormContainer1 state={"week"} role={"author"}/>
                         </div>
                         <div className={styles.parent4}>
                             <b className={styles.b7}>Останні рукописи</b>
-                            <div className={styles.frameWrapper1}>
-                                <div className={styles.frameParent2}>
-                                    <div className={styles.parent5}>
-                                        <b className={styles.b8}>Подані рукописи</b>
-                                        <b className={styles.b9}>Статус</b>
-                                    </div>
-                                    <div className={styles.wrapper}>
-                                        <div className={styles.b1}>
-                                            Наша сучасна типографія обладнана найновішим обладнанням
-                                            для друку книг та журналів. Друкуємо Ваші Твори. Наша
-                                            сучасна типографія обладнана найновішим обладнанням для
-                                            друку книг та журналів. Наша сучасна типографія обладнана
-                                            найновішим обладнанням для друку книг та журналів.
-                                            Друкуємо Ваші Твори. Наша сучасна типографія обладнана
-                                            найновішим обладнанням для друку книг та журналів.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.frameInner} />
-                            <div className={styles.frameWrapper1}>
-                                <div className={styles.frameParent2}>
-                                    <div className={styles.parent5}>
-                                        <b className={styles.b10}>Подані рукописи</b>
-                                        <b className={styles.b9}>Статус</b>
-                                    </div>
-                                    <div className={styles.wrapper}>
-                                        <div className={styles.b1}>
-                                            Наша сучасна типографія обладнана найновішим обладнанням
-                                            для друку книг та журналів. Друкуємо Ваші Твори. Наша
-                                            сучасна типографія обладнана найновішим обладнанням для
-                                            друку книг та журналів. Наша сучасна типографія обладнана
-                                            найновішим обладнанням для друку книг та журналів.
-                                            Друкуємо Ваші Твори. Наша сучасна типографія обладнана
-                                            найновішим обладнанням для друку книг та журналів.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <GetInfoWritings paramWritings = {"myWritings"} textParam = {"false"} numberMaxWritings={"3"} role={"author"}/>
                         </div>
                     </div>
                 </div>

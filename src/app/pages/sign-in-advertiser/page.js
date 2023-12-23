@@ -3,8 +3,6 @@ import styles from "./page.module.css";
 
 const SignInAdvertiser = () => {
 
-
-
     return (
         <div className={styles.signInAdvertiser}>
             <RegistrationSection

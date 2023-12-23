@@ -1,63 +1,54 @@
-.b,
-.b1 {
+.b {
+  flex: 1;
   position: relative;
 }
-.b {
+.wrapper {
   align-self: stretch;
-  flex: 1;
+  font-size: var(--font-size-11xl);
 }
-.b1 {
-  display: inline-block;
-  text-align: right;
-  width: 150px;
-  flex-shrink: 0;
-}
-.b1,
-.div,
-.parent {
-  align-self: stretch;
-}
-.parent {
+.container,
+.wrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-6xl);
+}
+.container,
+.div,
+.parent {
+  align-self: stretch;
 }
 .div {
   position: relative;
   line-height: 150%;
 }
-.frameGroup,
-.group {
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+  gap: var(--gap-3xs);
+}
+.b2,
+.frameWrapper {
+  font-family: var(--paragraph-bold-14);
+}
+.frameWrapper {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-}
-.group {
-  padding: 0 0 0 var(--padding-xl);
-  gap: var(--gap-3xs);
   font-size: var(--font-size-base);
   color: var(--color-dimgray-100);
-  font-family: var(--paragraph-bold-14);
-}
-.frameGroup {
-  gap: var(--gap-6xl);
 }
 .b2 {
   position: relative;
   font-size: var(--paragraph-bold-14-size);
   line-height: 150%;
-  font-family: var(--paragraph-bold-14);
   color: var(--color-white);
   text-align: center;
-}
-.contactUs,
-.frameParent {
-  display: flex;
-  justify-content: center;
 }
 .contactUs {
   cursor: pointer;
@@ -67,17 +58,132 @@
   border-radius: var(--br-5xs);
   box-sizing: border-box;
   height: 40px;
+  display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
-.frameParent {
+.b3,
+.div2 {
+  position: relative;
+}
+.b3 {
   align-self: stretch;
+}
+.div2 {
+  flex: 1;
+  line-height: 24px;
+  mix-blend-mode: normal;
+}
+.input,
+.textField {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.textField {
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-whitesmoke-100);
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-xs) var(--padding-base);
+}
+.input {
   flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-size-mini);
+  color: var(--color-dimgray-100);
+}
+.contactUs1,
+.contactUsWrapper,
+.frameContainer,
+.frameGroup,
+.group {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactUs1 {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumslateblue);
+  padding: var(--padding-base) var(--padding-5xl);
+  background-color: var(--color-mediumslateblue);
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  height: 40px;
+  flex-direction: row;
+}
+.contactUsWrapper,
+.frameContainer,
+.frameGroup,
+.group {
+  flex-direction: column;
+}
+.frameContainer,
+.frameGroup,
+.group {
   align-items: flex-end;
+}
+.group {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-100);
+  padding: var(--padding-31xl) var(--padding-81xl);
+  gap: var(--gap-3xs);
+}
+.frameContainer,
+.frameGroup {
+  padding: 0 var(--padding-31xl);
+}
+.frameGroup {
+  padding: var(--padding-xl) var(--padding-xl) var(--padding-xl) 0;
+  gap: var(--gap-xl);
+}
+.frameChild {
+  position: relative;
+  border-top: 2px solid var(--color-whitesmoke-200);
+  box-sizing: border-box;
+  width: 892px;
+  height: 2px;
+}
+.frameParent1,
+.parent1 {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.parent1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 var(--padding-xl);
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-100);
+  font-family: var(--paragraph-bold-14);
+}
+.frameParent1 {
+  gap: var(--gap-6xl);
+}
+.frameDiv,
+.frameParent,
+.frameParent1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.frameDiv {
+  align-items: flex-end;
+  justify-content: center;
   padding: var(--padding-xl) var(--padding-xl) var(--padding-xl) 0;
   gap: var(--gap-3xs);
+}
+.frameParent {
+  align-items: flex-start;
+  justify-content: flex-start;
   text-align: left;
-  font-size: var(--font-size-11xl);
+  font-size: var(--font-size-xl);
   color: var(--color-black);
   font-family: var(--font-inter);
 }
@@ -100,4 +206,15 @@
   .div {
     font-size: var(--font-size-xs);
   }
+}
+
+
+
+.contactUsGroup {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--gap-xl);
 }

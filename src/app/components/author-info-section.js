@@ -1,4 +1,5 @@
 import styles from "./author-info-section.module.css";
+import Link from "next/link";
 
 const AuthorInfoSection = () => {
   return (
@@ -13,9 +14,9 @@ const AuthorInfoSection = () => {
               редагуванням і рецензуванням.
             </p>
           </div>
-          <div className={styles.contactUs}>
+          <Link className={styles.contactUs} href={"/pages/sign-in-author"}>
             <b className={styles.b1}>Стати Автором</b>
-          </div>
+          </Link>
         </div>
         <div className={styles.containerWrapper}>
           <img

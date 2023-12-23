@@ -1,8 +1,9 @@
 import styles from "./form-container2.module.css";
 
-const FormContainer2 = () => {
+const FormContainer2 = ({OnUploadFieldClick}) => {
+
   return (
-    <div className={styles.frameParent}>
+    <div className={styles.frameParent} onClick={OnUploadFieldClick}>
       <div className={styles.wrapper}>
         <b className={styles.b}>Для продовження додайте файл рукопису</b>
       </div>

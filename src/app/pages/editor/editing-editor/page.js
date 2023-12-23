@@ -1,3 +1,4 @@
+"use client"
 import EditPageContainer from "../../../components/edit-page-container";
 import styles from "./page.module.css";
 import Header from "@/app/components/header";

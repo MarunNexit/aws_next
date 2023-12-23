@@ -1,26 +1,45 @@
-import PublishHouseContainer from "../../../components/publish-house-container";
+"use client"
 import ContainerForm from "../../../components/container-form";
 import styles from "./page.module.css";
 import Header from "@/app/components/header";
+import {useEffect, useState} from "react";
+import {getAuthorManuscripts} from "@/app/functions/manuscripts/GetAuthorManuscripts";
+import GetInfoWritings from "@/app/components/get-info-writings";
 
 const WritingsAuthor = () => {
+
+    const [writingsAutor, setWritingsAutor] = useState([]);
+
+    useEffect( () => {
+        async function WritingsInfo() {
+            try {
+                const temp = await getAuthorManuscripts()
+                console.log(temp)
+
+                await setWritingsAutor(
+                    temp,
+                );
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        WritingsInfo()
+    }, []);
+
+    useEffect(() => {
+        console.log(writingsAutor)
+    }, [writingsAutor]);
+
+
+
     return (
         <div className={styles.writingsauthor}>
             <Header value={"author"} />
             <div className={styles.writingsauthorInner}>
                 <div className={styles.frameChild} />
             </div>
-            <div className={styles.parent}>
-                <b className={styles.b}>Мої рукописи</b>
-                <ContainerForm propAlignSelf="stretch" />
-                <div className={styles.frameItem} />
-                <ContainerForm propAlignSelf="unset" />
-                <div className={styles.frameItem} />
-                <ContainerForm propAlignSelf="unset" />
-                <div className={styles.frameItem} />
-                <ContainerForm propAlignSelf="unset" />
-                <div className={styles.frameItem} />
-            </div>
+            <GetInfoWritings paramWritings = {"myWritings"} textParam = {"Мої рукописи"} role={"author"}/>
         </div>
     );
 };

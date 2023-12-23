@@ -14,7 +14,7 @@ const SendAuthor = () => {
                 <div className={styles.wrapper1}>
                     <b className={styles.b4}>Подати рукопис</b>
                 </div>
-                <FormContainer5 />
+                <FormContainer5 TitleContainer = {"Форма рукопису"}/>
             </div>
         </div>
     );

@@ -1,0 +1,205 @@
+.title {
+    display: inline-block;
+    width: 163px;
+    height: 45px;
+    flex-shrink: 0;
+}
+.b,
+.title {
+    position: relative;
+}
+.wrapper {
+    border-radius: var(--br-26xl);
+    background-color: var(--color-whitesmoke-100);
+    width: 223px;
+    height: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 0 0 var(--padding-11xl);
+    box-sizing: border-box;
+}
+.b1 {
+    position: relative;
+    display: inline-block;
+    width: 103px;
+}
+.container,
+.frameParent,
+.titleParent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container {
+    border-radius: var(--br-26xl);
+    width: 223px;
+    height: 34px;
+    justify-content: space-between;
+    padding: 0 0 0 var(--padding-11xl);
+    box-sizing: border-box;
+}
+.frameParent,
+.titleParent {
+    justify-content: flex-start;
+}
+.frameParent {
+    gap: var(--gap-3xs);
+    font-size: var(--font-size-mini);
+}
+.titleParent {
+    width: 300px;
+    padding: var(--padding-41xl) 0 0;
+    box-sizing: border-box;
+    gap: var(--gap-71xl);
+}
+.frameChild {
+    position: relative;
+    border-right: 2px solid var(--color-whitesmoke-200);
+    box-sizing: border-box;
+    width: 2px;
+    height: 937px;
+}
+.newpageForManuscriptauthorInner {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-91xl) 0 0;
+}
+.b4,
+.b5 {
+    position: relative;
+}
+.b4 {
+    align-self: stretch;
+}
+.b5 {
+    flex: 1;
+}
+.wrapper1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.div {
+    flex: 1;
+    position: relative;
+    line-height: 150%;
+}
+.div,
+.email,
+.group {
+    align-self: stretch;
+}
+.group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+}
+.email {
+    position: relative;
+    line-height: 150%;
+    display: inline-block;
+    width: 265.5px;
+    flex-shrink: 0;
+}
+.frameParent1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-8xs);
+}
+.frameContainer,
+.frameParent1,
+.frameWrapper1 {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.frameWrapper1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+.frameContainer {
+    gap: var(--gap-3xs);
+    font-size: var(--font-size-base);
+    color: var(--color-dimgray-100);
+    font-family: var(--paragraph-bold-14);
+}
+.frameContainer,
+.frameGroup,
+.frameWrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+.frameGroup {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-6xl);
+}
+.frameWrapper {
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--padding-xl) var(--padding-xl) var(--padding-xl) 0;
+    font-size: var(--font-size-11xl);
+}
+.newpageForManuscriptauthor,
+.parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.parent {
+    align-self: stretch;
+    flex: 1;
+    flex-direction: column;
+    padding: var(--padding-81xl) 0 0 var(--padding-31xl);
+    gap: var(--gap-31xl);
+    font-size: var(--font-size-17xl);
+    color: var(--color-black);
+}
+.newpageForManuscriptauthor {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    overflow: hidden;
+    flex-direction: row;
+    padding: 0 var(--padding-131xl) var(--padding-381xl) var(--padding-31xl);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: var(--h4-heading-size);
+    color: var(--color-slateblue);
+    font-family: var(--font-inter);
+}
+@media screen and (max-width: 1200px) {
+    .div,
+    .email {
+        font-size: var(--font-size-base);
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 961px) {
+    .div,
+    .email {
+        font-size: var(--font-size-base);
+    }
+}
+@media screen and (max-width: 960px) {
+    .div,
+    .email {
+        font-size: var(--font-size-xs);
+    }
+}
+@media screen and (max-width: 420px) {
+    .div,
+    .email {
+        font-size: var(--font-size-xs);
+    }
+}

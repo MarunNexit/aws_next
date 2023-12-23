@@ -35,7 +35,9 @@ const Profile = () => {
             <SectionCard/>
             <SectionCard1/>
             <CooperationSection/>
-            <NewPublicationsSection/>
+            <div id={"publication"}>
+                <NewPublicationsSection />
+            </div>
             <AuthorInfoSection/>
             <SectionCard2/>
             <PublishHouseSection/>

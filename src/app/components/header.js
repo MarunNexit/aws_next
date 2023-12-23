@@ -29,7 +29,7 @@ const Header = ({ value }) => {
                     <div className={styles.container} onClick={() => handleRedirect('/pages/author/send-author')}>
                         <b className={styles.b}>Подати рукопис</b>
                     </div>
-                    <div className={styles.container} onClick={() => handleRedirect('/pages/author/profile-author')}>
+                    <div className={styles.container} onClick={() => handleRedirect('/pages/author/profile-author#statistic')}>
                         <b className={styles.b}>Продажі</b>
                     </div>
                 </div>

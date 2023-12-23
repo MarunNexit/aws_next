@@ -1,4 +1,5 @@
 import styles from "./container-card.module.css";
+import Link from "next/link";
 
 const ContainerCard = () => {
   return (
@@ -18,12 +19,12 @@ const ContainerCard = () => {
           </div>
         </div>
         <div className={styles.largenormaljustifyactiveParent}>
-          <button className={styles.largenormaljustifyactive}>
+          <Link className={styles.largenormaljustifyactive} href="/pages/sign-in-author" >
             <b className={styles.b}>Стати автором</b>
-          </button>
-          <button className={styles.largenormaljustifyactive}>
+          </Link>
+          <Link className={styles.largenormaljustifyactive} href="/pages/sign-in-advertiser" >
             <b className={styles.b}>Замовити рекламу</b>
-          </button>
+          </Link>
         </div>
       </div>
       <img className={styles.containerIcon} alt="" src="/container3@2x.png" />

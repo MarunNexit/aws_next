@@ -100,3 +100,16 @@
   color: var(--color-black);
   font-family: var(--font-inter);
 }
+
+.textField input {
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px; /* змініть значення, якщо потрібно */
+  font-size: 16px; /* змініть значення, якщо потрібно */
+}
+
+.textField input:focus {
+  /* можна додати стилі для активного (фокусного) стану, якщо потрібно */
+
+}

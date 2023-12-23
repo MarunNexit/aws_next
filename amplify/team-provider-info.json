@@ -27,7 +27,7 @@
         },
         "GetManuscripts": {
           "deploymentBucketName": "amplify-awscrm-dev-215206-deployment",
-          "s3Key": "amplify-builds/GetManuscripts-5143726f446c677a3561-build.zip"
+          "s3Key": "amplify-builds/GetManuscripts-674b5a4a65526b48654a-build.zip"
         }
       },
       "storage": {

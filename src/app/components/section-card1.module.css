@@ -105,6 +105,7 @@
   text-align: center;
 }
 .contactUs {
+  text-decoration: none;
   cursor: pointer;
   border: 1px solid var(--color-mediumslateblue);
   padding: var(--padding-base) var(--padding-29xl);

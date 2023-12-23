@@ -1,9 +1,7 @@
-import PublishHouseContainer from "../../../components/publish-house-container";
-import Container from "../../../components/container";
-import EditedManuscriptsContainer from "../../../components/edited-manuscripts-container";
-import ContainerForm2 from "../../../components/container-form2";
+
 import styles from "./page.module.css";
 import Header from "@/app/components/header";
+import GetInfoWritings from "@/app/components/get-info-writings";
 
 const PublicationManager = () => {
     return (
@@ -25,9 +23,9 @@ const PublicationManager = () => {
                         </button>
                     </div>
                 </div>
-                <Container />
-                <EditedManuscriptsContainer />
-                <ContainerForm2 />
+                <GetInfoWritings paramWritings = {"AllWritingsRequest"} textParam = {"Нові рукописи від авторів"} role={"manager"}/>
+                <GetInfoWritings paramWritings = {"AllWritingsEdited"} textParam = {"На редагуванні або рецензуванні"} role={"manager"}/>
+                <GetInfoWritings paramWritings = {"AllWritingsPublished"} textParam = {"Опубліковані видання"} role={"manager"}/>
             </div>
         </div>
     );

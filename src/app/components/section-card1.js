@@ -1,4 +1,5 @@
 import styles from "./section-card1.module.css";
+import Link from "next/link";
 
 const SectionCard1 = () => {
   return (
@@ -48,9 +49,9 @@ const SectionCard1 = () => {
           </div>
         </div>
         <div className={styles.contactUsWrapper}>
-          <button className={styles.contactUs}>
+          <Link className={styles.contactUs} href={"/pages/home#publication"}>
             <b className={styles.b}>Детальніше про видання</b>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

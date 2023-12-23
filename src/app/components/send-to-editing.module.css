@@ -1,0 +1,230 @@
+.b {
+    flex: 1;
+    position: relative;
+}
+.b2,
+.wrapper {
+    align-self: stretch;
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.b2 {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    width: 150px;
+    flex-shrink: 0;
+}
+.parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-6xl);
+}
+.div,
+.group,
+.parent {
+    align-self: stretch;
+}
+.div {
+    position: relative;
+    line-height: 150%;
+}
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-xl);
+    gap: var(--gap-3xs);
+}
+.b3,
+.frameWrapper {
+    font-family: var(--paragraph-bold-14);
+}
+.frameWrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: var(--font-size-base);
+    color: var(--color-dimgray-100);
+}
+.b3 {
+    position: relative;
+    font-size: var(--paragraph-bold-14-size);
+    line-height: 150%;
+    color: var(--color-white);
+    text-align: center;
+}
+.contactUs,
+.contactUsParent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contactUs {
+    cursor: pointer;
+    border: 1px solid var(--color-mediumslateblue);
+    padding: var(--padding-base) var(--padding-5xl);
+    background-color: var(--color-mediumslateblue);
+    border-radius: var(--br-5xs);
+    box-sizing: border-box;
+    height: 40px;
+    justify-content: center;
+}
+.contactUsParent {
+    justify-content: flex-end;
+    gap: var(--gap-xl);
+}
+.b5,
+.div2 {
+    position: relative;
+}
+.b5 {
+    align-self: stretch;
+}
+.div2 {
+    flex: 1;
+    line-height: 24px;
+    mix-blend-mode: normal;
+}
+.input,
+.textField {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+}
+.textField {
+    border-radius: var(--br-8xs);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-whitesmoke-100);
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--padding-xs) var(--padding-base);
+}
+.input {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-size-mini);
+    color: var(--color-dimgray-100);
+}
+.b7 {
+    position: relative;
+}
+.input2 {
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: var(--font-size-mini);
+    color: var(--color-dimgray-100);
+}
+.frameDiv {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--gap-3xs);
+}
+.contactUs2,
+.contactUsWrapper,
+.container,
+.frameContainer {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactUs2 {
+    cursor: pointer;
+    border: 1px solid var(--color-mediumslateblue);
+    padding: var(--padding-base) var(--padding-29xl);
+    background-color: var(--color-mediumslateblue);
+    border-radius: var(--br-5xs);
+    box-sizing: border-box;
+    height: 40px;
+    flex-direction: row;
+}
+.contactUsWrapper,
+.container,
+.frameContainer {
+    flex-direction: column;
+}
+.container,
+.frameContainer {
+    align-items: flex-end;
+}
+.container {
+    border-radius: var(--br-5xs);
+    background-color: var(--color-whitesmoke-100);
+    padding: var(--padding-31xl) var(--padding-81xl);
+    gap: var(--gap-3xs);
+}
+.frameContainer {
+    padding: 0 var(--padding-31xl);
+}
+.contactUsGroup,
+.frameGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--gap-xl);
+}
+.frameGroup {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--padding-xl) var(--padding-xl) var(--padding-xl) 0;
+    font-size: var(--font-size-xl);
+}
+.frameChild {
+    position: relative;
+    border-top: 2px solid var(--color-whitesmoke-200);
+    box-sizing: border-box;
+    width: 892px;
+    height: 2px;
+}
+.frameParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xl);
+    text-align: left;
+    font-size: var(--font-size-11xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+}
+@media screen and (max-width: 1200px) {
+    .div {
+        font-size: var(--font-size-base);
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 961px) {
+    .div {
+        font-size: var(--font-size-base);
+    }
+}
+@media screen and (max-width: 960px) {
+    .div {
+        font-size: var(--font-size-xs);
+    }
+}
+@media screen and (max-width: 420px) {
+    .div {
+        font-size: var(--font-size-xs);
+    }
+}
