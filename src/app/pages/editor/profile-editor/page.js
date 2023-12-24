@@ -26,7 +26,11 @@ const ProfileEditor = () => {
                 console.log(error)
             }
         }
-        UserInfo()
+        if (typeof window !== 'undefined') {
+            UserInfo()
+        } else {
+            // код, который выполнится только на сервере
+        }
     }, []);
 
     useEffect(() => {
