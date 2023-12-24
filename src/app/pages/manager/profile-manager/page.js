@@ -38,7 +38,7 @@ const ProfileManager = () => {
                 <div className={styles.frameChild} />
             </div>
             <div className={styles.profilemanagerChild}>
-                <ContainerForm3 userInfo = {userInfo}/>
+
             </div>
         </div>
     );
