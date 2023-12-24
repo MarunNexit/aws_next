@@ -31,7 +31,7 @@ const ContainerForm3 = (userInfo) => {
               <div className={styles.div1}>300</div>
             </div>
           </div>
-          <FormContainer1 />
+
         </div>
       </div>
     </div>
