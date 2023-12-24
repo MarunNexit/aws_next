@@ -3,7 +3,7 @@ import styles from "./form-container1.module.css";
 import React, {useEffect, useState} from 'react';
 import ReactApexChart from 'react-apexcharts';
 import {GetMyManuscriptPeriod} from "@/app/functions/manuscripts/GetMyManuscriptPeriod";
-import {getAuthorManuscripts} from "@/app/functions/manuscripts/GetAuthorManuscripts";
+
 const Chart = ({state, role}) => {
 
     const [tempChartData, setTempChartData] = useState([]);
