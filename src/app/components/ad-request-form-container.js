@@ -1,3 +1,4 @@
+"use client"
 import React, {useRef, useState} from "react";
 import styles from "./ad-request-form-container.module.css";
 import FormContainer2 from "@/app/components/form-container2";
