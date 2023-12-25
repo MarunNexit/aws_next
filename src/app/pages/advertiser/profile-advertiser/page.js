@@ -170,7 +170,7 @@ const ProfileAdvertiser = () => {
                                     <div className={styles.div12}>30</div>
                                 </div>
                             </div>
-                            <FormContainer1 />
+                            <FormContainer1 state={"week"} role={"advertiser"} />
                         </div>
                     </div>
                 </div>

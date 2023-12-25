@@ -29,7 +29,7 @@ const ContainerForm4 = (userInfo) => {
               <div className={styles.div1}>300</div>
             </div>
           </div>
-          <FormContainer1 />
+          <FormContainer1 state={"week"} role={"editor"}/>
         </div>
       </div>
     </div>
