@@ -35,14 +35,8 @@ const ProfileEditor = () => {
 
 
     return (
-        <div className={styles.profileeditor}>
+        <div >
 
-            <div className={styles.profileeditorInner}>
-                <div className={styles.frameChild} />
-            </div>
-            <div className={styles.profileeditorChild}>
-                <ContainerForm4 userInfo = {userInfo}/>
-            </div>
         </div>
     );
 };
