@@ -33,9 +33,6 @@ const ProfileAuthor = () => {
         }
     }, []);
 
-    useEffect(() => {
-        console.log(userInfo)
-    }, [userInfo]);
 
     return (
         <div className={styles.profileauthor}>
