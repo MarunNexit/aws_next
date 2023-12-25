@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import ReactApexChart from 'react-apexcharts';
 import {GetMyManuscriptPeriod} from "@/app/functions/manuscripts/GetMyManuscriptPeriod";
 
-const Chart = ({state, role}) => {
+const FormContainer1 = ({state, role}) => {
 
     const [tempChartData, setTempChartData] = useState([]);
     const currentDate = new Date();
@@ -178,4 +178,4 @@ const Chart = ({state, role}) => {
   );
 };
 
-export default Chart;
+export default FormContainer1;
