@@ -1,5 +1,4 @@
 import ContainerForm1 from "./container-form1";
-import FormContainer1 from "./form-container1";
 import styles from "./container-form3.module.css";
 
 const ContainerForm3 = (userInfo) => {
@@ -31,7 +30,7 @@ const ContainerForm3 = (userInfo) => {
               <div className={styles.div1}>300</div>
             </div>
           </div>
-          <FormContainer1 state={"week"} role={"manager"}/>
+
         </div>
       </div>
     </div>

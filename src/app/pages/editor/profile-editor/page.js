@@ -1,5 +1,6 @@
 "use client"
 import Header from "../../../components/header";
+import ContainerForm4 from "../../../components/container-form4";
 import styles from "./page.module.css";
 import {useEffect, useState} from "react";
 import {getUserInfo} from "@/app/functions/GetUserInfo";
@@ -38,7 +39,7 @@ const ProfileEditor = () => {
                 <div className={styles.frameChild} />
             </div>
             <div className={styles.profileeditorChild}>
-
+                <ContainerForm4 userInfo = {userInfo}/>
             </div>
         </div>
     );

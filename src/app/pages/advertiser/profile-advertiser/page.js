@@ -1,6 +1,5 @@
 "use client"
 import Header from "../../../components/header";
-import FormContainer1 from "../../../components/form-container1";
 import styles from "./page.module.css";
 import {useEffect, useState} from "react";
 import {getUserInfo} from "@/app/functions/GetUserInfo";
@@ -170,7 +169,7 @@ const ProfileAdvertiser = () => {
                                     <div className={styles.div12}>30</div>
                                 </div>
                             </div>
-                            <FormContainer1 state={"week"} role={"advertiser"} />
+
                         </div>
                     </div>
                 </div>

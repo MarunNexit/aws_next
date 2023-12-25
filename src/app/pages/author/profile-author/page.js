@@ -1,6 +1,5 @@
 "use client"
 
-import FormContainer1 from "../../../components/form-container1";
 import styles from "./page.module.css";
 import Header from "@/app/components/header";
 import {useEffect, useState} from "react";
@@ -69,7 +68,7 @@ const ProfileAuthor = () => {
                                     <div className={styles.div6}>$300</div>
                                 </div>
                             </div>
-                            <FormContainer1 state={"week"} role={"author"}/>
+
                         </div>
                         <div className={styles.parent4}>
                             <b className={styles.b7}>Останні рукописи</b>

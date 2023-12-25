@@ -1,5 +1,4 @@
 import ContainerForm1 from "./container-form1";
-import FormContainer1 from "./form-container1";
 import styles from "./container-form4.module.css";
 
 const ContainerForm4 = (userInfo) => {
@@ -29,7 +28,6 @@ const ContainerForm4 = (userInfo) => {
               <div className={styles.div1}>300</div>
             </div>
           </div>
-          <FormContainer1 state={"week"} role={"editor"}/>
         </div>
       </div>
     </div>
