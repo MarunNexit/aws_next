@@ -11,25 +11,21 @@ import {getUserInfo} from "@/app/functions/GetUserInfo";
 const ProfileEditor = () => {
     const [userInfo, setUserInfo] = useState([]);
 
-    useEffect( () => {
+    useEffect(() => {
         async function UserInfo() {
             try {
-                const temp = await getUserInfo()
-                console.log(temp)
+                if (typeof window !== 'undefined') {
+                    const temp = await getUserInfo()
+                    console.log(temp)
 
-                await setUserInfo(
-                    temp,
-                );
-
+                    await setUserInfo(temp);
+                }
             } catch (error) {
                 console.log(error)
             }
         }
-        if (typeof window !== 'undefined') {
-            UserInfo()
-        } else {
-            // код, который выполнится только на сервере
-        }
+
+        UserInfo();
     }, []);
 
     useEffect(() => {
@@ -39,7 +35,13 @@ const ProfileEditor = () => {
 
     return (
         <div className={styles.profileeditor}>
-
+            <Header value={"editor"} />
+            <div className={styles.profileeditorInner}>
+                <div className={styles.frameChild} />
+            </div>
+            <div className={styles.profileeditorChild}>
+                <ContainerForm4 userInfo = {userInfo}/>
+            </div>
         </div>
     );
 };
