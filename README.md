@@ -1,5 +1,5 @@
 ## Project Description:
-Developed a cutting-edge website for a publishing house using the Next.js framework. Leveraged AWS Amplify for hosting, ensuring high availability and seamless scalability. Implemented secure user authentication with AWS Cognito, while AWS Lambda and REST API handle backend functionality. Stored data efficiently using AWS RDS and MySQL.
+Developed a cutting-edge website for a publishing house using the Next.js framework. Leveraged AWS Amplify for hosting, ensuring high availability and seamless scalability. Implemented secure user authentication with AWS Cognito, while AWS Lambda (REST API) handle backend functionality. Stored data efficiently using AWS RDS and MySQL.
 
 ## Key Features:
 Speed and Efficiency: Next.js and AWS Amplify combination ensures rapid page loading and high performance.
