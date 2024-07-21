@@ -9,3 +9,10 @@ Security: AWS Cognito provides robust user authentication, prioritizing data pro
 Scalability: Project architecture allows easy scalability to accommodate growing user traffic and data.
 
 This project represents a fusion of modern technologies, creating a powerful and efficient web platform tailored for your publishing needs. Its capabilities and structure make it an ideal choice for a digital publishing environment.
+
+## Results
+Home Page
+![HeadPagePublishHouse](https://github.com/user-attachments/assets/1dc90810-1630-44e4-9dd7-4ec89438c473)
+
+Manager Page
+![ManagerPublishHouse](https://github.com/user-attachments/assets/548e5d32-8be9-4848-8844-532e69012beb)
